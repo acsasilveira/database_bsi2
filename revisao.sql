@@ -1,4 +1,5 @@
 -- Anotações CLARA
+
 create database dbrevisão;
 use dbrevisão;
 
