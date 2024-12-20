@@ -1,0 +1,22 @@
+-- Select
+
+-- Ordenação:
+
+-- Seleciona tais colunas da tabela tal ordenado por coluna (desc - descrescente) e se dados iguais ordenar por outra coluna tbm
+select valsal, nmfunc, sexo
+from tbfuncionario
+order by valsal desc, nmfunc;
+
+-- Quebra a data em dia, mês e ano
+select nmfunc, day(dtnascim) Dia, month(dtnascim) Mês, year(dtnascim) Ano
+from tbfuncionario
+order by nmfunc;
+
+select * from tbfuncionario where cddepto not in (1,2,3);
+
+-- Consulta dentro de consulta
+
+select cdcidade, nmcidade
+from tbcidade
+where cdcidade not in (select cdcidadenasc from tbfuncionario);
+
